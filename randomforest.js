@@ -98,9 +98,6 @@ function predictForest(forest, sample) {
   return { prediction: fraudVotes > votes.length / 2 ? "fraud" : "legit", confidence: pct, fraudVotes, total: votes.length };
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-// SYNTHETIC TRAINING DATA
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function generateTrainingData(n = 400) {
   const data = [];
@@ -134,10 +131,6 @@ const PRESETS = {
   normal: { amount: 85, hour: 14, newDevice: 0, foreignCountry: 0, txPerHour: 1, avgDelta: 45 },
   borderline: { amount: 650, hour: 22, newDevice: 1, foreignCountry: 0, txPerHour: 4, avgDelta: 300 },
 };
-
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-// UI
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export default function FraudDetector() {
   const [forest, setForest] = useState(null);
