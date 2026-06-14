@@ -1,7 +1,7 @@
 var findNumbers = function(nums) {
     result = 0;
     for(i=0;i<nums.length;i++) {
-        out = String(num[i]).length;
+        out = String(nums[i]).length;
         if(out % 2 === 0) {
             result+=1;
         }
