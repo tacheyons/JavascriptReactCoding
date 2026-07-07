@@ -10,3 +10,7 @@ var findNumbers = function(nums) {
 };
 
 findNumbers([12,345,2,6,7896]);
+
+const handleClick = (id) => (e) => {
+    console.log("clicked:", id);
+  };
